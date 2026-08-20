@@ -13,10 +13,11 @@
       font-family: 'Hiragino Mincho ProN', 'Yu Mincho', Georgia, serif;
     }
 
-    /* ── Hero ── */
+    /* ── Hero: 画像を正しい比率で表示 ── */
     .hero {
       position: relative;
       width: 100%;
+      overflow: hidden;
     }
 
     .hero-img {
@@ -25,55 +26,48 @@
       height: auto;
     }
 
-    .hero-overlay {
+    /* 下端にフェードアウト */
+    .hero-fade {
       position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        to bottom,
-        rgba(10,10,15,0)   0%,
-        rgba(10,10,15,0)   50%,
-        rgba(10,10,15,0.6) 80%,
-        rgba(10,10,15,1)   100%
-      );
+      bottom: 0; left: 0; right: 0;
+      height: 45%;
+      background: linear-gradient(to bottom, transparent, #0a0a0f);
     }
 
-    .hero-title {
-      position: absolute;
-      bottom: 28px;
-      left: 0;
-      right: 0;
+    /* ── ページタイトル（画像の下） ── */
+    .page-header {
       text-align: center;
+      padding: 28px 24px 36px;
     }
 
-    .hero-title h1 {
-      font-size: clamp(1.3rem, 4.5vw, 2.4rem);
+    .page-header h1 {
+      font-size: clamp(1.4rem, 5vw, 2.2rem);
       font-weight: 700;
-      letter-spacing: 0.15em;
+      letter-spacing: 0.18em;
       color: #f0e8d0;
-      text-shadow: 0 2px 16px rgba(0,0,0,0.9);
     }
 
     .gold-line {
-      width: 60px;
+      width: 56px;
       height: 2px;
       background: linear-gradient(90deg, transparent, #c9a84c, transparent);
-      margin: 12px auto 0;
+      margin: 14px auto 0;
     }
 
     /* ── Section ── */
     .section {
-      max-width: 640px;
+      max-width: 600px;
       margin: 0 auto;
-      padding: 48px 20px 56px;
+      padding: 0 16px 60px;
     }
 
     .section-label {
-      font-size: 0.72rem;
-      letter-spacing: 0.35em;
+      font-size: 0.7rem;
+      letter-spacing: 0.38em;
       color: #c9a84c;
       text-transform: uppercase;
       text-align: center;
-      margin-bottom: 28px;
+      margin-bottom: 20px;
     }
 
     /* ── App card ── */
@@ -81,29 +75,29 @@
       display: block;
       text-decoration: none;
       color: inherit;
-      background: linear-gradient(135deg, #1a0f18, #0f1a2e);
-      border: 1px solid rgba(201,168,76,0.3);
-      border-radius: 16px;
+      background: linear-gradient(145deg, #1c1028, #0d1b30);
+      border: 1px solid rgba(201,168,76,0.28);
+      border-radius: 18px;
       overflow: hidden;
-      transition: transform 0.2s, border-color 0.2s;
+      transition: transform 0.25s, border-color 0.25s;
+      -webkit-tap-highlight-color: transparent;
     }
 
-    .app-card:hover {
-      transform: translateY(-3px);
-      border-color: rgba(201,168,76,0.65);
+    .app-card:active {
+      transform: scale(0.98);
     }
 
     .app-card-inner {
       display: flex;
-      gap: 18px;
+      gap: 16px;
       align-items: center;
-      padding: 20px;
+      padding: 18px 18px 14px;
     }
 
     .app-icon {
-      width: 80px;
-      height: 80px;
-      border-radius: 18px;
+      width: 76px;
+      height: 76px;
+      border-radius: 17px;
       overflow: hidden;
       flex-shrink: 0;
     }
@@ -115,78 +109,85 @@
       display: block;
     }
 
-    .app-info { flex: 1; min-width: 0; }
+    .app-info {
+      flex: 1;
+      min-width: 0;
+    }
 
     .app-name {
       font-size: 1.1rem;
       font-weight: 700;
       letter-spacing: 0.05em;
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }
 
     .app-sub {
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       color: #c9a84c;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.14em;
       margin-bottom: 8px;
     }
 
     .app-desc {
-      font-size: 0.8rem;
-      color: rgba(240,232,208,0.6);
-      line-height: 1.65;
+      font-size: 0.78rem;
+      color: rgba(240,232,208,0.55);
+      line-height: 1.7;
       font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif;
     }
 
+    /* ダウンロードボタン */
     .app-dl-btn {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
-      margin: 0 20px 20px;
-      padding: 13px 16px;
+      gap: 9px;
+      margin: 0 14px 16px;
+      padding: 15px 16px;
       background: linear-gradient(135deg, #8b1a2f, #6b2040);
-      border: 1px solid rgba(201,168,76,0.35);
-      border-radius: 10px;
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 12px;
       color: #f0e8d0;
-      font-size: 0.88rem;
+      font-size: 0.92rem;
       font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.09em;
+      font-weight: 600;
     }
 
     .app-dl-btn svg {
-      width: 17px;
-      height: 17px;
+      width: 18px;
+      height: 18px;
       flex-shrink: 0;
     }
 
     /* ── Divider ── */
     .divider {
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(201,168,76,0.2), transparent);
+      background: linear-gradient(90deg, transparent, rgba(201,168,76,0.18), transparent);
       margin: 36px 0;
     }
 
     /* ── Instagram ── */
-    .insta-section { text-align: center; }
+    .insta-section {
+      text-align: center;
+    }
 
     .insta-link {
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      padding: 14px 28px;
-      border: 1px solid rgba(201,168,76,0.35);
+      padding: 16px 32px;
+      border: 1px solid rgba(201,168,76,0.32);
       border-radius: 50px;
       text-decoration: none;
       color: #f0e8d0;
       font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
-      font-size: 0.92rem;
+      font-size: 0.95rem;
       letter-spacing: 0.08em;
-      transition: border-color 0.2s, background 0.2s;
+      -webkit-tap-highlight-color: transparent;
+      transition: border-color 0.2s;
     }
 
-    .insta-link:hover {
-      border-color: rgba(201,168,76,0.7);
+    .insta-link:active {
       background: rgba(201,168,76,0.06);
     }
 
@@ -198,18 +199,18 @@
 
     .insta-note {
       margin-top: 10px;
-      font-size: 0.72rem;
-      color: rgba(240,232,208,0.35);
+      font-size: 0.7rem;
+      color: rgba(240,232,208,0.32);
       font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.06em;
     }
 
     /* ── Footer ── */
     footer {
       text-align: center;
-      padding: 24px;
-      font-size: 0.68rem;
-      color: rgba(240,232,208,0.2);
+      padding: 20px 24px 40px;
+      font-size: 0.65rem;
+      color: rgba(240,232,208,0.18);
       font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
       letter-spacing: 0.15em;
     }
@@ -217,13 +218,16 @@
 </head>
 <body>
 
+  <!-- Hero: 画像をそのまま表示、テキストとの干渉なし -->
   <div class="hero">
     <img class="hero-img" src="hero.jpeg" alt="難関年号 世界史トレーニング">
-    <div class="hero-overlay"></div>
-    <div class="hero-title">
-      <h1>9s0ma1u のアプリ一覧</h1>
-      <div class="gold-line"></div>
-    </div>
+    <div class="hero-fade"></div>
+  </div>
+
+  <!-- タイトルは画像の下に独立して配置 -->
+  <div class="page-header">
+    <h1>9s0ma1u のアプリ一覧</h1>
+    <div class="gold-line"></div>
   </div>
 
   <div class="section">
