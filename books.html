@@ -21,7 +21,15 @@
   li a { display:flex; align-items:center; gap:12px; padding:14px 16px; color:var(--text); text-decoration:none; }
   li a:active { opacity:.6; }
   li a::after { content:'›'; margin-left:auto; font-size:1.5rem; color:var(--muted); }
+  li a > span { display:block; }
   li img { width:48px; height:68px; object-fit:contain; border-radius:6px; flex-shrink:0; }
+  li.top { background:linear-gradient(135deg, rgba(240,165,0,0.14), rgba(240,165,0,0.03)); }
+  li.top a { padding:18px 16px; }
+  li.top a::after { display:none; }
+  li.top img { width:88px; height:124px; box-shadow:0 4px 12px rgba(0,0,0,0.18); }
+  li.top .t { font-size:1.05rem; }
+  .badge { display:table; margin-bottom:6px; font-size:.72rem; font-weight:800; color:#fff; background:#f0a500; border-radius:999px; padding:2px 10px; }
+  .cta { display:table; margin-top:10px; font-size:.8rem; font-weight:700; color:#fff; background:#bf0000; border-radius:999px; padding:6px 14px; }
   .t { font-weight:700; font-size:.95rem; }
   .note { display:block; font-size:.8rem; color:var(--sub); font-weight:400; }
 </style>
@@ -34,7 +42,7 @@
 
   <h2>年号</h2>
   <ul>
-    <li><a data-u="https://books.rakuten.co.jp/rb/15221555/"><img src="https://tshop.r10s.jp/book/cabinet/4200/9784010344200.jpg?downsize=120:*" alt="" loading="lazy"><span><span class="t">『元祖 世界史の年代暗記法』四訂版</span><span class="note">語呂合わせで年号を覚える定番書。</span></span></a></li>
+    <li class="top"><a data-u="https://books.rakuten.co.jp/rb/15221555/"><img src="https://tshop.r10s.jp/book/cabinet/4200/9784010344200.jpg?downsize=240:*" alt="" loading="lazy"><span><span class="badge">👑 いちばんのおすすめ</span><span class="t">『元祖 世界史の年代暗記法』四訂版</span><span class="note">語呂合わせで年号を覚える定番書。まずはこの1冊。</span><span class="cta">楽天ブックスで見る</span></span></a></li>
     <li><a data-u="https://books.rakuten.co.jp/rb/18642075/"><img src="https://tshop.r10s.jp/book/cabinet/1750/9784761231750_1_4.jpg?downsize=120:*" alt="" loading="lazy"><span><span class="t">『改訂版 超効率！ 世界史年代サーキットトレーニング』</span></span></a></li>
   </ul>
 
