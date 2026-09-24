@@ -5,50 +5,57 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>おすすめ世界史参考書</title>
 <style>
-  /* トップページ(index.html)のダーク×ゴールドに合わせる */
-  :root { --bg:#0a0a0f; --fg:#f0e8d0; --sub:#9a917c; --line:rgba(201,168,76,0.32); --accent:#c9a84c; }
-  body { margin:0; background:var(--bg); color:var(--fg); font-family:'Hiragino Kaku Gothic ProN', sans-serif; line-height:1.7; }
-  h1, h2 { font-family:'Hiragino Mincho ProN', 'Yu Mincho', serif; color:var(--accent); }
-  main { max-width:720px; margin:0 auto; padding:24px 16px 48px; }
-  .pr { font-size:.85em; color:var(--sub); border:1px solid var(--line); padding:8px 12px; border-radius:6px; }
-  h2 { font-size:1.1em; margin-top:2em; border-bottom:1px solid var(--line); padding-bottom:4px; }
-  li { margin:.6em 0; }
-  a { color:var(--accent); }
-  .note { font-size:.9em; color:var(--sub); }
+  /* アプリ(MenuScreen)のライト/ダークテーマに合わせる */
+  :root { --bg:#f0f6fb; --card:#fff; --border:rgba(41,128,185,0.18); --text:#0d1f35; --sub:#4a7a9b; --muted:#8aafc5; --accent:#2471a3; --divider:#cde0ee; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#0a1929; --card:rgba(93,173,226,0.08); --border:rgba(93,173,226,0.18); --text:#e8f4fd; --sub:#7fb3d3; --muted:#3d6a8a; --accent:#5dade2; --divider:#162d44; } }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font-family:-apple-system, 'Hiragino Kaku Gothic ProN', sans-serif; line-height:1.6; -webkit-tap-highlight-color:transparent; }
+  main { max-width:560px; margin:0 auto; padding:20px 16px 48px; }
+  .back { color:var(--accent); text-decoration:none; font-weight:600; }
+  h1 { font-size:1.6rem; font-weight:800; margin:12px 0 16px; }
+  .pr { font-size:.8rem; color:var(--sub); background:var(--card); border:1px solid var(--border); border-radius:14px; padding:10px 14px; }
+  h2 { font-size:.85rem; font-weight:700; letter-spacing:.15em; color:var(--sub); margin:28px 4px 8px; }
+  ul { list-style:none; margin:0; padding:0; background:var(--card); border:1px solid var(--border); border-radius:20px; overflow:hidden; }
+  li + li { border-top:1px solid var(--divider); }
+  li a { display:flex; align-items:center; gap:12px; padding:14px 16px; color:var(--text); text-decoration:none; }
+  li a:active { opacity:.6; }
+  li a::after { content:'›'; margin-left:auto; font-size:1.5rem; color:var(--muted); }
+  .t { font-weight:700; font-size:.95rem; }
+  .note { display:block; font-size:.8rem; color:var(--sub); font-weight:400; }
 </style>
 </head>
 <body>
 <main>
-  <p><a href="./">← トップへ</a></p>
+  <a class="back" href="./">‹ トップへ</a>
   <h1>おすすめ世界史参考書</h1>
   <p class="pr">【PR】このページには楽天アフィリエイトのリンクが含まれています。リンク経由で購入されると、運営者に報酬が発生します。</p>
 
   <h2>知識・用語</h2>
   <ul>
-    <li><a data-q="山川 世界史用語集">山川出版社『世界史用語集』</a><br><span class="note">教科書への掲載頻度つきで、用語の重要度がわかる。</span></li>
-    <li><a data-q="元祖 世界史の年代暗記法">『元祖 世界史の年代暗記法』</a><br><span class="note">語呂合わせで年号を覚える定番書。</span></li>
-    <li><a data-q="東進 世界史 一問一答">東進『世界史一問一答』</a><br><span class="note">一問一答形式で用語を確認できる。</span></li>
+    <li><a data-q="山川 世界史用語集"><span><span class="t">山川出版社『世界史用語集』</span><span class="note">教科書への掲載頻度つきで、用語の重要度がわかる。</span></span></a></li>
+    <li><a data-q="元祖 世界史の年代暗記法"><span><span class="t">『元祖 世界史の年代暗記法』</span><span class="note">語呂合わせで年号を覚える定番書。</span></span></a></li>
+    <li><a data-q="東進 世界史 一問一答"><span><span class="t">東進『世界史一問一答』</span><span class="note">一問一答形式で用語を確認できる。</span></span></a></li>
   </ul>
 
   <h2>教科書・通史</h2>
   <ul>
-    <li><a data-q="書きこみ教科書 詳説世界史">山川出版社『書きこみ教科書 詳説世界史』</a><br><span class="note">教科書の空欄に書き込みながら通史を固める。</span></li>
-    <li><a data-q="英文 詳説世界史">山川出版社『英文詳説世界史』</a><br><span class="note">山川の教科書の英語版。</span></li>
+    <li><a data-q="書きこみ教科書 詳説世界史"><span><span class="t">山川出版社『書きこみ教科書 詳説世界史』</span><span class="note">教科書の空欄に書き込みながら通史を固める。</span></span></a></li>
+    <li><a data-q="英文 詳説世界史"><span><span class="t">山川出版社『英文詳説世界史』</span><span class="note">山川の教科書の英語版。</span></span></a></li>
   </ul>
 
   <h2>問題集・論述</h2>
   <ul>
-    <li><a data-q="実力をつける世界史">『実力をつける世界史』</a></li>
-    <li><a data-q="慶應 世界史 問題集">慶應義塾大学入試対策用 世界史問題集</a></li>
-    <li><a data-q="みるみる論述力がつく世界史">『みるみる論述力がつく世界史』</a></li>
+    <li><a data-q="実力をつける世界史"><span class="t">『実力をつける世界史』</span></a></li>
+    <li><a data-q="慶應 世界史 問題集"><span class="t">慶應義塾大学入試対策用 世界史問題集</span></a></li>
+    <li><a data-q="みるみる論述力がつく世界史"><span class="t">『みるみる論述力がつく世界史』</span></a></li>
   </ul>
 
   <h2>過去問（赤本 2027年度版）</h2>
   <ul>
-    <li><a data-q="赤本 慶應義塾大学 経済学部 2027">慶應義塾大学 経済学部</a></li>
-    <li><a data-q="赤本 慶應義塾大学 商学部 2027">慶應義塾大学 商学部</a></li>
-    <li><a data-q="赤本 慶應義塾大学 法学部 2027">慶應義塾大学 法学部</a></li>
-    <li><a data-q="赤本 慶應義塾大学 文学部 2027">慶應義塾大学 文学部</a></li>
+    <li><a data-q="赤本 慶應義塾大学 経済学部 2027"><span class="t">慶應義塾大学 経済学部</span></a></li>
+    <li><a data-q="赤本 慶應義塾大学 商学部 2027"><span class="t">慶應義塾大学 商学部</span></a></li>
+    <li><a data-q="赤本 慶應義塾大学 法学部 2027"><span class="t">慶應義塾大学 法学部</span></a></li>
+    <li><a data-q="赤本 慶應義塾大学 文学部 2027"><span class="t">慶應義塾大学 文学部</span></a></li>
   </ul>
 </main>
 <script>
