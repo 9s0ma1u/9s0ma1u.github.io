@@ -54,7 +54,7 @@
 <script>
   // 楽天アフィリエイトの管理画面で確認できるアフィリエイトID（例: 1a2b3c4d.5e6f7a8b.1a2b3c4d.5e6f7a8b）
   // 空のままなら通常の楽天ブックス検索リンクになる
-  const AFFILIATE_ID = '';
+  const AFFILIATE_ID = '57ddc492.e52a3184.57ddc493.16079be5';
   document.querySelectorAll('a[data-q]').forEach(a => {
     const target = 'https://books.rakuten.co.jp/search?sitem=' + encodeURIComponent(a.dataset.q);
     a.href = AFFILIATE_ID ? 'https://hb.afl.rakuten.co.jp/hgc/' + AFFILIATE_ID + '/?pc=' + encodeURIComponent(target) : target;
