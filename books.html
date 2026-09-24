@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>おすすめ世界史参考書</title>
+<style>
+  /* トップページ(index.html)のダーク×ゴールドに合わせる */
+  :root { --bg:#0a0a0f; --fg:#f0e8d0; --sub:#9a917c; --line:rgba(201,168,76,0.32); --accent:#c9a84c; }
+  body { margin:0; background:var(--bg); color:var(--fg); font-family:'Hiragino Kaku Gothic ProN', sans-serif; line-height:1.7; }
+  h1, h2 { font-family:'Hiragino Mincho ProN', 'Yu Mincho', serif; color:var(--accent); }
+  main { max-width:720px; margin:0 auto; padding:24px 16px 48px; }
+  .pr { font-size:.85em; color:var(--sub); border:1px solid var(--line); padding:8px 12px; border-radius:6px; }
+  h2 { font-size:1.1em; margin-top:2em; border-bottom:1px solid var(--line); padding-bottom:4px; }
+  li { margin:.6em 0; }
+  a { color:var(--accent); }
+  .note { font-size:.9em; color:var(--sub); }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="./">← トップへ</a></p>
+  <h1>おすすめ世界史参考書</h1>
+  <p class="pr">【PR】このページには楽天アフィリエイトのリンクが含まれています。リンク経由で購入されると、運営者に報酬が発生します。</p>
+
+  <h2>知識・用語</h2>
+  <ul>
+    <li><a data-q="山川 世界史用語集">山川出版社『世界史用語集』</a><br><span class="note">教科書への掲載頻度つきで、用語の重要度がわかる。</span></li>
+    <li><a data-q="元祖 世界史の年代暗記法">『元祖 世界史の年代暗記法』</a><br><span class="note">語呂合わせで年号を覚える定番書。</span></li>
+    <li><a data-q="東進 世界史 一問一答">東進『世界史一問一答』</a><br><span class="note">一問一答形式で用語を確認できる。</span></li>
+  </ul>
+
+  <h2>教科書・通史</h2>
+  <ul>
+    <li><a data-q="書きこみ教科書 詳説世界史">山川出版社『書きこみ教科書 詳説世界史』</a><br><span class="note">教科書の空欄に書き込みながら通史を固める。</span></li>
+    <li><a data-q="英文 詳説世界史">山川出版社『英文詳説世界史』</a><br><span class="note">山川の教科書の英語版。</span></li>
+  </ul>
+
+  <h2>問題集・論述</h2>
+  <ul>
+    <li><a data-q="実力をつける世界史">『実力をつける世界史』</a></li>
+    <li><a data-q="慶應 世界史 問題集">慶應義塾大学入試対策用 世界史問題集</a></li>
+    <li><a data-q="みるみる論述力がつく世界史">『みるみる論述力がつく世界史』</a></li>
+  </ul>
+
+  <h2>過去問（赤本 2027年度版）</h2>
+  <ul>
+    <li><a data-q="赤本 慶應義塾大学 経済学部 2027">慶應義塾大学 経済学部</a></li>
+    <li><a data-q="赤本 慶應義塾大学 商学部 2027">慶應義塾大学 商学部</a></li>
+    <li><a data-q="赤本 慶應義塾大学 法学部 2027">慶應義塾大学 法学部</a></li>
+    <li><a data-q="赤本 慶應義塾大学 文学部 2027">慶應義塾大学 文学部</a></li>
+  </ul>
+</main>
+<script>
+  // 楽天アフィリエイトの管理画面で確認できるアフィリエイトID（例: 1a2b3c4d.5e6f7a8b.1a2b3c4d.5e6f7a8b）
+  // 空のままなら通常の楽天ブックス検索リンクになる
+  const AFFILIATE_ID = '';
+  document.querySelectorAll('a[data-q]').forEach(a => {
+    const target = 'https://books.rakuten.co.jp/search?sitem=' + encodeURIComponent(a.dataset.q);
+    a.href = AFFILIATE_ID ? 'https://hb.afl.rakuten.co.jp/hgc/' + AFFILIATE_ID + '/?pc=' + encodeURIComponent(target) : target;
+    a.target = '_blank';
+    a.rel = 'sponsored noopener';
+  });
+</script>
+</body>
+</html>
